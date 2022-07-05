@@ -1,0 +1,48 @@
+<head>
+  <meta charset="UTF-8" />
+  <title><%= meta.title %>｜sitename</title>
+  <meta name="description" content="<%= meta.description %>" />
+  <meta name="keywords" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <!-- OGP -->
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content=""> <%# 90文字推奨 %>
+  <meta property="og:type" content=""> <%# TOPページはwebsite、子ページはarticle %>
+  <meta property="og:url" content="#"> <%# サイトURL %>
+  <meta property="og:image" content=""> <%# 1200×630以上推奨、絶対パス %>
+  <meta name="twitter:card" content="summary or summary_large_image">
+  <meta name="twitter:site" content=""> <%# @ユーザー名 %>
+  <meta name="format-detection" content="telephone=no">
+  <!-- タッチアイコン -->
+  <link rel="apple-touch-icon" sizes="192x192" href="#">
+  <link rel="shortcut icon" sizes="192x192" href="#">
+  <!-- ファビコン -->
+  <link rel="icon" href="#">
+  <!-- クローラー -->
+  <meta name="robots" content="noindex">
+  <!-- フォント設定 -->
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'blt5sfs',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+  <!-- アイコン -->
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <!-- ejsのメタデータにswiperCssがあったら読み込む -->
+  <% if(meta.swiperCss) { %>
+  <link rel="stylesheet" href="<%= meta.swiperCss %>swiper.min.css" />
+  <% } %>
+  <!-- css -->
+  <link rel="stylesheet" href="<%= meta.stylePath %>style.css" />
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
+  <script src="<%= meta.scriptPath %>index.js" defer></script>
+</head>

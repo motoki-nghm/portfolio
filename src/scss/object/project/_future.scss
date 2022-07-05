@@ -1,0 +1,16 @@
+@use "../../foundation" as *;
+/* =========================================================================
+  p-future
+========================================================================= */
+.p-future {
+  padding-bottom: 64px;
+  &__heading {
+    margin-top: 24px;
+    text-align: center;
+    font-size: rem(16px);
+    letter-spacing: 5%;
+  }
+  &__content {
+    margin-top: 8px;
+  }
+}

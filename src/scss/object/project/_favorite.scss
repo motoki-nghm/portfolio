@@ -1,0 +1,83 @@
+@use "../../foundation" as *;
+/* =========================================================================
+  p-favorite
+========================================================================= */
+.p-favorite {
+  background:$bgColor;
+  padding: 32px 0 64px;
+  &__item {
+    & + & {
+      margin-top: 64px;
+    }
+  }
+  &__heading {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__num {
+    display: inline-block;
+    font-family: $font-en;
+    font-weight: 700;
+    font-size: rem(16px);
+    color: $lightColor;
+    letter-spacing: 0.1em;
+    padding: 1.5em 1em;
+    border-radius: 9999px;
+    &--01 {
+      background-color: $mainColor;
+      text-shadow: 1px 1px 2px #999;
+    }
+    &--02 {
+      background-color: $subColor;
+      text-shadow: 1px 1px 2px #666;
+    }
+    &--03 {
+      background-color: $accentColor;
+      text-shadow: 1px 1px 2px #8a8a8a;
+    }
+  }
+  &__title {
+    margin-left: 8px;
+    filter: blur(3px);
+    transition: filter 0.8s;
+    &.is-clear {
+      filter: blur(0);
+      transition: filter 0.8s;
+    }
+  }
+  &__en-title, &__ja-title {
+    display: block;
+  }
+  &__en-title {
+    font-size: rem(20px);
+    font-family: $font-en;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  &__ja-title {
+    font-size: rem(12px);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    font-size: rem(12px);
+    line-height: 2;
+    letter-spacing: 0.125em;
+  }
+  &__figure {
+    order: -1;
+    display: grid;
+    width: 90%;
+    margin: 24px auto 16px;
+  }
+  &__img {
+    object-fit: cover;
+  }
+}

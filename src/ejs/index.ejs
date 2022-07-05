@@ -1,0 +1,12 @@
+<% const page='home'; %>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./partials/_head.ejs',{meta:data.pageMeta[page]}); %>
+
+<body>
+  <%- include('./partials/_header.ejs',{meta:data.pageMeta[page]}); %>
+  <%- include('./partials/_main.ejs',{meta:data.pageMeta[page]}); %>
+  <%- include('./partials/_footer.ejs',{meta:data.pageMeta[page]}); %>
+</body>
+
+</html>

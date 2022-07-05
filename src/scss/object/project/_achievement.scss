@@ -1,0 +1,64 @@
+@use "../../foundation" as *;
+/* =========================================================================
+  p-achievement
+========================================================================= */
+.p-achievement {
+  background: $bgColor;
+  padding-bottom: 64px;
+  &__text {
+    margin-top: 24px;
+    text-align: center;
+  }
+  &__container {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__slider {
+    order: -1;
+    text-align: center;
+  }
+  &__content {
+    margin-top: 24px;
+  }
+  &__heading {
+    display: none;
+  }
+  &__item {
+    text-align: center;
+    & + & {
+      margin-top: 16px;
+    }
+  }
+  &__term {
+    font-size: rem(12px);
+    font-weight: 700;
+  }
+  &__discription {
+    &--alignleft {
+      text-align: left;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+  &__btn {
+    font-size: rem(16px);
+    & + & {
+      margin-left: 16px;
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-left: 0.25em;
+      width: 24px;
+      height: 24px;
+      color: #666;
+    }
+  }
+}

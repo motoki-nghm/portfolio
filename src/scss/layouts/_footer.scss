@@ -1,0 +1,12 @@
+@use '../foundation' as *;
+/* =========================================================================
+  l-footer
+========================================================================= */
+.l-footer {
+  background-color: $accentColor;
+  text-align: center;
+  &__copyright {
+    color: $lightColor;
+    padding: 0.5em 0;
+  }
+}

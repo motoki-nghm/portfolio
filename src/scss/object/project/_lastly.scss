@@ -1,0 +1,35 @@
+@use "../../foundation" as *;
+/* =========================================================================
+  p-lastly
+========================================================================= */
+.p-lastly {
+  background-image: url("#{$imgPath}lastlyBg02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 64px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  &__inner {
+    margin-top: 32px;
+    color: $lightColor;
+    position: relative;
+    z-index: 10;
+  }
+  &__content {
+    line-height: 1.75;
+    & + & {
+      margin-top: 1.5em;
+    }
+  }
+  &__name {
+    margin-top: 2em;
+  }
+}

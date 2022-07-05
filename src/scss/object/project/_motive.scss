@@ -1,0 +1,46 @@
+@use "../../foundation" as *;
+/* =========================================================================
+  p-motive
+========================================================================= */
+.p-motive {
+  height: 100vh;
+  overflow-y: hidden;
+  &__container {
+    margin-top: 32px;
+    position: relative;
+  }
+  &__heading {
+    text-align: center;
+    span {
+      font-size: rem(20px);
+      font-family: $font-en;
+      font-weight: 700;
+      margin-right: 0.25em;
+    }
+  }
+  &__content {
+    margin-top: 24px;
+    line-height: 2;
+  }
+  &__icon {
+    position: absolute;
+    width: 32px;
+    &--01 {
+      top: 0;
+      left: 0;
+
+    }
+    &--02 {
+      bottom: 0;
+      left: 0;
+    }
+    &--03 {
+      top: 0;
+      right: 0;
+    }
+    &--04 {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

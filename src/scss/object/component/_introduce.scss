@@ -1,0 +1,39 @@
+@use "../../foundation" as *;
+/* =========================================================================
+  c-introduce
+========================================================================= */
+.c-introduce {
+  &__title {
+    font-size: rem(16px);
+    font-weight: 700;
+  }
+  &__list {
+    margin-top: 24px;
+  }
+  &__item {
+    font-size: rem(14px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    & + & {
+      margin-top: 1em;
+    }
+  }
+  &__term {
+    width: 30%;
+    font-family: $font-en;
+
+  }
+  &__description {
+    width: 70%;
+  }
+  &__subitem {
+    &::before {
+      content: "・";
+      margin-right: 0.25em;
+    }
+    & + & {
+      margin-top: 0.5em;
+    }
+  }
+}

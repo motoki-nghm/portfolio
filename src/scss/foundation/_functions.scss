@@ -1,0 +1,24 @@
+@use "sass:math";
+
+//pxをremに変換
+@function rem($px, $basepx:16px) {
+  $base: math.div($px, $basepx);
+  @return $base * 1rem;
+}
+//pxをvwに変換
+@function vw($size, $viewport: 375) {
+  $rate: math.div(100,$viewport);
+  @return $rate * $size * 1vw;
+}
+@function vw_lg($size, $viewport: 1440) {
+  $rate: math.div(100,$viewport);
+  @return $rate * $size * 1vw;
+}
+@function vh($size, $viewport: 375) {
+  $rate: math.div(100,$viewport);
+  @return $rate * $size * 1vh;
+}
+@function vh_lg($size, $viewport: 1440) {
+  $rate: math.div(100,$viewport);
+  @return $rate * $size * 1vh;
+}

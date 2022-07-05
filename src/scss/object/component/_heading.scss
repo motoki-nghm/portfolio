@@ -1,0 +1,23 @@
+@use "../../foundation" as *;
+/* =========================================================================
+  .c-heading
+========================================================================= */
+.c-heading {
+  padding-top: 32px;
+  font-family: $font-en;
+  font-size: rem(24px);
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  &--blue {
+    color: $accentColor;
+  }
+  &--white {
+    position: relative;
+    z-index: 10;
+    color: $lightColor;
+  }
+  &__jp {
+    font-size: rem(12px);
+    font-family: $font-jp;
+  }
+}
