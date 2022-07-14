@@ -1,0 +1,26 @@
+@use "../foundation" as *;
+/* =========================================================================
+  swiper
+========================================================================= */
+.swiper-pagination-bullet {
+  background-color: $lightColor;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: $accentColor;
+}
+
+.swiper-button-prev:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f137";
+  color: #fff; /* 色を白に */
+  margin-left: 20px; /* マージンを追加 */
+}
+.swiper-button-next:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f138";
+  color: #fff;
+  margin-right: 20px;
+}

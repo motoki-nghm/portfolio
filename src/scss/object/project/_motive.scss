@@ -3,14 +3,64 @@
   p-motive
 ========================================================================= */
 .p-motive {
-  height: 100vh;
-  overflow-y: hidden;
-  &__container {
-    margin-top: 32px;
-    position: relative;
-  }
+  padding: 32px 0 64px;
+    &__item {
+      $this: &;
+      position: relative;
+      &--01,&--02 {
+        &::before,&::after {
+          content: "";
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          position: absolute;
+          top: 0;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      &--01 {
+        &::before {
+          width: 40px;
+          left: 3%;
+          background-image: url(#{$imgPath}webp/kamaboko.webp);
+          transform:  scale(0.1)rotate(-15deg);
+        }
+        &::after {
+          width: 40px;
+          right: 3%;
+          background-image: url(#{$imgPath}webp/motorcycle.webp);
+          transform:  scale(0.1)rotate(15deg);
+        }
+      }
+      &--02 {
+        &::before {
+          height: 36px;
+          left: 2%;
+          background-image: url(#{$imgPath}webp/gamingchair.webp);
+          transform:  scale(0)rotate(-15deg);
+        }
+        &::after {
+          height: 36px;
+          right: 2%;
+          background-image: url(#{$imgPath}webp/lantern.webp);
+          transform:  scale(0)rotate(15deg);
+        }
+      }
+      &.is-inview#{$this}::before {
+        transform: rotate(-15deg)scale(1);
+        transition: all 0.4s;
+      }
+      &.is-inview#{$this}::after,{
+        transform: rotate(15deg)scale(1);
+        transition: all 0.4s;
+      }
+    }
   &__heading {
-    text-align: center;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     span {
       font-size: rem(20px);
       font-family: $font-en;
@@ -21,26 +71,5 @@
   &__content {
     margin-top: 24px;
     line-height: 2;
-  }
-  &__icon {
-    position: absolute;
-    width: 32px;
-    &--01 {
-      top: 0;
-      left: 0;
-
-    }
-    &--02 {
-      bottom: 0;
-      left: 0;
-    }
-    &--03 {
-      top: 0;
-      right: 0;
-    }
-    &--04 {
-      bottom: 0;
-      right: 0;
-    }
   }
 }

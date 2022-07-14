@@ -34,15 +34,14 @@
   })(document);
 </script>
   <!-- アイコン -->
+  <script src="https://kit.fontawesome.com/d699952408.js" crossorigin="anonymous"></script>
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  <!-- ejsのメタデータにswiperCssがあったら読み込む -->
-  <% if(meta.swiperCss) { %>
-  <link rel="stylesheet" href="<%= meta.swiperCss %>swiper.min.css" />
-  <% } %>
   <!-- css -->
+  <link rel="stylesheet" href="<%= meta.swiperCss %>swiper.min.css" />
   <link rel="stylesheet" href="<%= meta.stylePath %>style.css" />
   <!-- js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
+  <script src="<%= meta.scriptPath %>vendors/gsap.min.js" defer></script>
+  <script src="<%= meta.scriptPath %>vendors/ScrollTrigger.min.js" defer></script>
+  <script src="<%= meta.scriptPath %>vendors/swiper.min.js" defer></script>
   <script src="<%= meta.scriptPath %>index.js" defer></script>
 </head>

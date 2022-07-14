@@ -56,11 +56,13 @@
 				s.parentNode.insertBefore(tk, s)
 			})(document);
 		</script>
+		<script src="https://kit.fontawesome.com/d699952408.js" crossorigin="anonymous"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 		<link rel="stylesheet" href="./assets/css/vendors/swiper.min.css">
 		<link rel="stylesheet" href="./assets/css/style.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer="defer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer="defer"></script>
+		<script src="./assets/js/vendors/gsap.min.js" defer="defer"></script>
+		<script src="./assets/js/vendors/ScrollTrigger.min.js" defer="defer"></script>
+		<script src="./assets/js/vendors/swiper.min.js" defer="defer"></script>
 		<script src="./assets/js/index.js" defer="defer"></script>
 	</head>
 	<body>
@@ -256,72 +258,82 @@
 					</ol>
 				</div>
 			</section>
-			<section class="p-motive js-pin--motive">
+			<section class="p-motive">
 				<div class="l-inner">
 					<h2 class="c-heading js-fade" lang="en">Mo<span class="c-heading--blue">t</span>ive <span class="c-heading__jp" lang="ja">自己紹介</span></h2>
 					<ol class="p-motive__container">
-						<li class="p-motive__item">
+						<li class="p-motive__item p-motive__item--01 js-icon-animation">
 							<h3 class="p-motive__heading"><span class="u-color__font--accent">1.</span>モノづくりに携わりたい</h3>
 							<p class="p-motive__content"> キャンプに興味を持つようになってから、アウトドアイベントなどで個人でギアを製作して販売している方にお会いする機会が増えました。作られた想いはもちろんですが、見えないところへの細かい配慮などもお聞きし、聞いているだけでワクワクしてしまいます。<br> モノづくりを一貫して行える御社であれば、商品に込める想いを純度の高いままお客様にお届けし、多くの方によりワクワクを共感していただけるのではないかと考えています。<br> もし御社で働くことができたら、「自分が企画から携わった商品のwebでの紹介ページなどを自分でデザインや構築してPRする」なんてことを妄想しています。 </p>
 						</li>
-						<li class="p-motive__item">
+						<li class="p-motive__item p-motive__item--02 js-icon-animation">
 							<h3 class="p-motive__heading"><span class="u-color__font--accent">2.</span>仕事とプライベートが相互に<br>影響する環境へ</h3>
 							<p class="p-motive__content"> いま、副業としてホームページの制作に携わらせていただいております。<br> このお仕事は、実はキャンプを始めるにあたっての軍資金とするために始めました。ただ、今では技術を身に付ければ身に付けるほどお客様に喜んでいただけることが多くなる、どんどん新しい技術がやトレンドが生まれ、学びに終わりがないこの分野がキャンプと同じくらい好きになりました。<br> 御社で働く方がストレスなく快適に業務できるシステムのデザインや構築で貢献することで、より多くの商品の開発や供給に寄与でき、私自身も消費者として御社の商品を楽しめるのでは、と考えています。 </p>
 						</li>
 					</ol>
-					<p class="p-motive__icon p-motive__icon--01">
-						<img src="./assets/img/kamaboko.png" alt="カマボコテント">
-					</p>
-					<p class="p-motive__icon p-motive__icon--02">
-						<img src="./assets/img/gamingchair.png" alt="ゲーミングチェア">
-					</p>
-					<p class="p-motive__icon p-motive__icon--03">
-						<img src="./assets/img/lantern.png" alt="ランタン">
-					</p>
-					<p class="p-motive__icon p-motive__icon--04">
-						<img src="./assets/img/motorcycle.png" alt="バイク">
-					</p>
 				</div>
 			</section>
-			<section class="p-achievement">
+			<section class="p-achievement js-slide-scroll">
 				<div class="l-inner">
 					<h2 class="c-heading js-fade" lang="en">Ach<span class="c-heading--blue">i</span>evement <span class="c-heading__jp" lang="ja">制作実績</span></h2>
 					<div class="p-achievement__inner">
 						<p class="p-achievement__text"> 今まで作成した実績を<br>少しだけご紹介させていただきます。 </p>
-						<div class="p-achievement__container">
-							<div class="p-achievement__content">
-								<h3 class="p-achievement__heading" lang="en"> data </h3>
-								<dl class="p-achievement__list">
-									<div class="p-achievement__item">
-										<dt class="p-achievement__term" lang="en">client</dt>
-										<dd class="p-achievement__discription">サンプル様</dd>
+						<div class="p-achievement__scroll-wrapper">
+							<ul class="p-achievement__list">
+								<li class="p-achievement__item">
+									<h3 class="p-achievement__title"> サンプル様&emsp;HP </h3>
+									<p class="p-achievement__role" lang="en">design/coding</p>
+									<p class="p-achievement__content"> テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト </p>
+									<figure class="p-achievement__figure">
+										<img src="./assets/img/webp/fv01.webp" alt="" class="p-achievement__img">
+									</figure>
+									<div class="p-achievement__link">
+										<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>capture</span><span class="iconify" data-icon="clarity:picture-line"></span></a></p>
+										<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>link</span><span class="iconify" data-icon="radix-icons:external-link"></span></a></p>
 									</div>
-									<div class="p-achievement__item">
-										<dt class="p-achievement__term" lang="en">role</dt>
-										<dd class="p-achievement__discription" lang="en">design / coding</dd>
+								</li>
+								<li class="p-achievement__item">
+									<h3 class="p-achievement__title"> サンプル様&emsp;HP </h3>
+									<p class="p-achievement__role" lang="en">design/coding</p>
+									<p class="p-achievement__content"> テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト </p>
+									<figure class="p-achievement__figure">
+										<img src="./assets/img/webp/fv01.webp" alt="" class="p-achievement__img">
+									</figure>
+									<div class="p-achievement__link">
+										<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>capture</span><span class="iconify" data-icon="clarity:picture-line"></span></a></p>
+										<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>link</span><span class="iconify" data-icon="radix-icons:external-link"></span></a></p>
 									</div>
-									<div class="p-achievement__item">
-										<dt class="p-achievement__term" lang="en">summary</dt>
-										<dd class="p-achievement__discription p-achievement__discription--alignleft">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</dd>
+								</li>
+								<li class="p-achievement__item">
+									<h3 class="p-achievement__title"> サンプル様&emsp;HP </h3>
+									<p class="p-achievement__role" lang="en">design/coding</p>
+									<p class="p-achievement__content"> テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト </p>
+									<figure class="p-achievement__figure">
+										<img src="./assets/img/webp/fv01.webp" alt="" class="p-achievement__img">
+									</figure>
+									<div class="p-achievement__link">
+										<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>capture</span><span class="iconify" data-icon="clarity:picture-line"></span></a></p>
+										<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>link</span><span class="iconify" data-icon="radix-icons:external-link"></span></a></p>
 									</div>
-								</dl>
-								<div class="p-achievement__link">
-									<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>capture</span><span class="iconify" data-icon="clarity:picture-line"></span></a></p>
-									<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>link</span><span class="iconify" data-icon="radix-icons:external-link"></span></a></p>
-								</div>
-							</div>
-							<div class="p-achievement__slider">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img src="https://picsum.photos/300/200" alt="">
+								</li>
+								<li class="p-achievement__item">
+									<h3 class="p-achievement__title"> サンプル様&emsp;HP </h3>
+									<p class="p-achievement__role" lang="en">design/coding</p>
+									<p class="p-achievement__content"> テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト </p>
+									<figure class="p-achievement__figure">
+										<img src="./assets/img/webp/fv01.webp" alt="" class="p-achievement__img">
+									</figure>
+									<div class="p-achievement__link">
+										<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>capture</span><span class="iconify" data-icon="clarity:picture-line"></span></a></p>
+										<p class="p-achievement__btn" lang="en"><a href="#" class="p-achievement__icon"><span>link</span><span class="iconify" data-icon="radix-icons:external-link"></span></a></p>
 									</div>
-								</div>
-							</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="p-future">
+			<section class="p-future js-pin--future">
 				<div class="l-inner">
 					<h2 class="c-heading js-fade" lang="en">Futu<span class="c-heading--blue">r</span>e <span class="c-heading__jp" lang="ja">入社後に挑戦したいこと</span></h2>
 					<div class="p-future__inner">
@@ -332,7 +344,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="p-lastly">
+			<section class="p-lastly js-pin--lastly">
 				<div class="l-inner">
 					<h2 class="c-heading c-heading--white js-fade" lang="en">lastl<span class="c-heading--blue">y</span>
 						<span class="c-heading__jp" lang="ja">最後に</span>
