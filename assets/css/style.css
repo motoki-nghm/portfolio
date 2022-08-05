@@ -454,6 +454,10 @@ button {
   font-family: bicyclette, sans-serif;
 }
 
+strong {
+  font-weight: inherit;
+}
+
 /* =========================================================================
   l-header
 ========================================================================= */
@@ -1339,10 +1343,10 @@ button {
 .p-fv__dice-wrapper::before {
   content: "";
   width: 80%;
-  height: 15%;
+  height: 12%;
   background-color: #7697A5;
   position: absolute;
-  bottom: -100px;
+  bottom: -40%;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -1377,11 +1381,6 @@ button {
   -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
   transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
   z-index: 5;
-}
-
-.p-fv__dice.is-loaded {
-  -webkit-animation: loadAnimation 4s linear 1, rotateAnimation 20s 4s linear infinite;
-  animation: loadAnimation 4s linear 1, rotateAnimation 20s 4s linear infinite;
 }
 
 .p-fv__parts {
