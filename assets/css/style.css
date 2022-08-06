@@ -1875,11 +1875,8 @@ strong {
   text-align: center;
 }
 
-.p-favorite__img--01 {
-  aspect-ratio: 7/3;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 60%;
+.p-favorite__figure--01 {
+  width: 90%;
 }
 
 /* =========================================================================
@@ -2478,6 +2475,10 @@ strong {
 
   .p-favorite__figure {
     width: 100%;
+  }
+
+  .p-favorite__figure--01 {
+    width: 60%;
   }
 
   .p-motive__heading {
