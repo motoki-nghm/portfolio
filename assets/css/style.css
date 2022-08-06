@@ -708,7 +708,7 @@ strong {
 .swiper-button-next {
   width: 48px;
   height: 24px;
-  top: 50%;
+  top: 42.5%;
   right: 0;
 }
 
@@ -2059,10 +2059,7 @@ strong {
 }
 
 .p-achievement__img {
-  height: 100%;
   text-align: center;
-  -o-object-fit: cover;
-  object-fit: cover;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   vertical-align: bottom;
@@ -2273,22 +2270,18 @@ strong {
 }
 
 @media screen and (min-width: 414px) {
+  .swiper-button-prev {
+    top: 52.5%;
+  }
+
   .swiper-button-next {
-    top: 55%;
+    top: 52.5%;
   }
 }
 
 @media screen and (min-width: 576px) {
   .l-header__nav {
     width: 50vw;
-  }
-
-  .swiper-button-prev {
-    top: 60%;
-  }
-
-  .swiper-button-next {
-    top: 60%;
   }
 
   .c-introduce__item {
@@ -2549,7 +2542,7 @@ strong {
   }
 
   .p-achievement__figure {
-    width: 50%;
+    width: 40%;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
