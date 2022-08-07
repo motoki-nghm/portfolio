@@ -2229,6 +2229,10 @@ strong {
   margin-top: 1.5em;
 }
 
+.p-lastly__content span {
+  display: inline-block;
+}
+
 .p-lastly__name {
   margin-top: 2em;
 }
@@ -2279,6 +2283,14 @@ strong {
 @media screen and (min-width: 576px) {
   .l-header__nav {
     width: 50vw;
+  }
+
+  .swiper-button-prev {
+    width: 64px;
+  }
+
+  .swiper-button-next {
+    width: 64px;
   }
 
   .c-introduce__item {
@@ -2338,13 +2350,11 @@ strong {
   }
 
   .swiper-button-prev {
-    width: 64px;
     top: 98%;
     left: 33%;
   }
 
   .swiper-button-next {
-    width: 64px;
     top: 98%;
     right: 33%;
   }
