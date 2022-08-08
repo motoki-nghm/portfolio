@@ -1602,8 +1602,8 @@ strong {
 
 @-webkit-keyframes rotateAnimation {
   0% {
-    -webkit-transform: rotate3d(0);
-    transform: rotate3d(0);
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+    transform: rotate3d(0, 0, 0, 0);
   }
 
   100% {
@@ -1614,8 +1614,8 @@ strong {
 
 @keyframes rotateAnimation {
   0% {
-    -webkit-transform: rotate3d(0);
-    transform: rotate3d(0);
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+    transform: rotate3d(0, 0, 0, 0);
   }
 
   100% {
@@ -2110,7 +2110,7 @@ strong {
   margin-top: 24px;
   text-align: center;
   font-size: 1rem;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   -webkit-transition: -webkit-filter 0.5s;
   transition: -webkit-filter 0.5s;
   transition: filter 0.5s;
@@ -2282,7 +2282,7 @@ strong {
   }
 
   .p-profile__figure {
-    right: none;
+    right: auto;
     left: 240px;
   }
 
