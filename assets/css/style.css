@@ -2166,12 +2166,14 @@ strong {
 }
 
 .p-future__img--01 {
+  min-width: 144px;
   width: 25%;
   bottom: -10%;
   right: -2%;
 }
 
 .p-future__img--02 {
+  min-width: 96px;
   width: 20%;
   top: 5%;
   left: -2%;
