@@ -63,7 +63,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js" defer="defer"></script>
 		<script src="./assets/js/vendors/ScrollTrigger.min.js" defer="defer"></script>
 		<script src="./assets/js/vendors/swiper.min.js" defer="defer"></script>
-		<script src="./assets/js/index.js" defer="defer"></script>
+		<script src="./assets/js/vendors/three.min.js" defer="defer"></script>
+		<script src="./assets/js/vendors/OrbitControls.js" defer="defer"></script>
+		<script src="./assets/js/vendors/GLTFLoader.js" defer="defer"></script>
+		<script src="./assets/js/app.js" defer="defer"></script>
 	</head>
 	<body>
 		<header class="l-header">
@@ -79,9 +82,9 @@
 					<ul class="l-header__menu">
 						<li class="l-header__item"><a href="#about" class="l-header__link" lang="en">About</a>
 						</li>
-						<li class="l-header__item"><a href="#favorite" class="l-header__link" lang="en">Favorite</a>
-						</li>
 						<li class="l-header__item"><a href="#motive" class="l-header__link" lang="en">Motive</a>
+						</li>
+						<li class="l-header__item"><a href="#favorite" class="l-header__link" lang="en">Favorite</a>
 						</li>
 						<li class="l-header__item"><a href="#achievement" class="l-header__link" lang="en">Achievement</a>
 						</li>
@@ -102,22 +105,22 @@
 						<div class="p-fv__dice-wrapper">
 							<div class="p-fv__dice">
 								<div class="p-fv__parts">
-									<img src="./assets/img/webp/fv01.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
+									<img src="./assets/img/webp/fv-cube01.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
 								</div>
 								<div class="p-fv__parts">
-									<img src="./assets/img/webp/fv02.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
+									<img src="./assets/img/webp/fv-cube02.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
 								</div>
 								<div class="p-fv__parts">
-									<img src="./assets/img/webp/fv03.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
+									<img src="./assets/img/webp/fv-cube03.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
 								</div>
 								<div class="p-fv__parts">
-									<img src="./assets/img/webp/fv04.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
+									<img src="./assets/img/webp/fv-cube04.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
 								</div>
 								<div class="p-fv__parts">
-									<img src="./assets/img/webp/fv05.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
+									<img src="./assets/img/webp/fv-cube05.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
 								</div>
 								<div class="p-fv__parts">
-									<img src="./assets/img/webp/fv06.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
+									<img src="./assets/img/webp/fv-cube06.webp" alt="キャンプの思い出" loading="lazy" class="p-fv__img">
 								</div>
 							</div>
 						</div>
@@ -163,8 +166,8 @@
 										</dd>
 									</div>
 								</dl>
-								<figure class="p-profile__figure">
-									<img src="./assets/img/webp/about.webp" alt="" loading="lazy" class="p-profile__img">
+								<figure class="p-profile__figure js-fade">
+									<img src="./assets/img/webp/about-01.webp" alt="" loading="lazy" class="p-profile__img">
 								</figure>
 							</section>
 							<section class="c-introduce">
@@ -179,19 +182,19 @@
 									<dl class="c-introduce__list">
 										<div class="c-introduce__item">
 											<dt class="c-introduce__term" lang="en">design</dt>
-											<dd class="c-introduce__description">書籍やオンラインサロン中心に学習しており、ツールはFigmaが中心で、webデザインだけでなくプレゼン資料にも活用しています。その他XD、Photoshop,illustratorも基本操作は習得しています。<br>本サイトのアイコンもillustratorで個人作成したものを使用しています。</dd>
+											<dd class="c-introduce__description">Figmaを中心にwebデザインからSNS投稿まで広く活用しています。その他XD、Photoshop,illustratorも基本操作は習得しています。<br>最近はBlenderで3Dモデルの作成も行っています。</dd>
 										</div>
 										<div class="c-introduce__item">
 											<dt class="c-introduce__term" lang="en">HTML</dt>
-											<dd class="c-introduce__description"><strong>サイトに訪れた方の「使いにくい」を少しでも減らせるようアクセシビリティを意識し、適切にマークアップを行うよう心がけています。</strong>また、自分がこれまで行ってきた実装を効率よく活用するためにEJSを使用し、それぞれのパーツで管理をし、使いまわせるようにしています。空いた時間をコーディング内容のチェックに充てることで品質を上げるよう取り組んでいます。</dd>
+											<dd class="c-introduce__description"><strong>サイトに訪れた方の「使いにくい」を少しでも減らせるようアクセシビリティを意識したコーディングを行っています。</strong>コーディング時はEJSを使用し、パーツ毎にNotionで管理し、別のコーディングにも活かしています。</dd>
 										</div>
 										<div class="c-introduce__item">
 											<dt class="c-introduce__term" lang="en">CSS</dt>
-											<dd class="c-introduce__description">可読性・保守性の高いコーディングを行う為、CSS設計はFLOCSSを採用しています。SCSSを使用し、色やフォントなどを細かくファイル毎で管理している為、修正や変更に臨機応変に対応できます。また、様々なサイトで使用したコーディングの使いまわしが容易にでき、コーディングの効率化ならびに品質の向上につながっています。</dd>
+											<dd class="c-introduce__description">CSS設計はFLOCSSを採用しており、色やフォントなどを細かくファイル毎で管理し、EJSのパーツと同じくNotionで管理を行っており、コーディングの実装の際の参考にしています。</dd>
 										</div>
 										<div class="c-introduce__item">
 											<dt class="c-introduce__term" lang="en">JavaScript</dt>
-											<dd class="c-introduce__description">これまではjQuery中心に構築していましたが、現在はVanilla JSで構築しています。アニメーションを実装する場合はGSAPを主に使用しています。<br>今後はReactでのサイト構築やThree.jsを使用した3Dアニメーションの実装を習得予定です。</dd>
+											<dd class="c-introduce__description">あまりjQueryは使わずに、現在はVanilla JSで構築しています。ライブラリはGSAPを主に使用しています。<br>今後はReactでのサイト構築やThree.jsを使用した3Dアニメーションの実装を習得予定です。</dd>
 										</div>
 										<div class="c-introduce__item">
 											<dt class="c-introduce__term" lang="en">PHP</dt>
@@ -212,11 +215,11 @@
 									<dl class="c-introduce__list">
 										<div class="c-introduce__item">
 											<dt class="c-introduce__term"><time>2013-04</time></dt>
-											<dd class="c-introduce__description">株式会社オリエントコーポレーションに新卒で就職。<br>広島でローン審査を担当する部署へ配属となり、車のローン審査に従事。<br>社会人としてのスキルと女性が9割の職場だったこともあり、お姉さま方たちとのお付き合いの仕方を学ぶ。</dd>
+											<dd class="c-introduce__description">株式会社オリエントコーポレーションに新卒で就職。<br>広島でローン審査を担当する部署へ配属となり、車のローン審査に従事。</dd>
 										</div>
 										<div class="c-introduce__item">
 											<dt class="c-introduce__term"><time>2015-10</time></dt>
-											<dd class="c-introduce__description">大阪に異動となり法人営業に従事。<br>大阪市内阿倍野区以南の地域を担当し、強面のナニワの社長たちとの付き合い方を学ぶ。<br>ローン審査に通りやすくなる知識を武器に、配属2年目で営業成績支店内1位、関西地区3位となり表彰を受ける。</dd>
+											<dd class="c-introduce__description">大阪に異動となり大阪市内阿倍野区以南の地域を担当する法人営業に従事。<br>ローン審査に通りやすくなる知識を武器に、配属2年目で営業成績支店内1位、関西地区3位となり表彰を受ける。</dd>
 										</div>
 										<div class="c-introduce__item">
 											<dt class="c-introduce__term"><time>2019-04</time></dt>
@@ -235,6 +238,25 @@
 							</section>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section class="p-motive" id="motive">
+				<div class="l-inner p-motive__container">
+					<h2 class="c-heading js-fade" lang="en">Mo<span class="c-heading--blue">t</span>ive <span class="c-heading__jp" lang="ja">志望動機</span></h2>
+					<ol class="p-motive__list">
+						<li class="p-motive__item p-motive__item--01">
+							<h3 class="p-motive__heading p-motive__heading--01 js-scale"><span class="u-color__font--accent">1.</span>使う側から作る側へ<br>モノづくりに携わりたい</h3>
+							<p class="p-motive__content js-fade"> アウトドアイベントによく家族を連れて参加するのですが、ガレージブランドなど個人でギアを製作されている方にお会いする機会が増えました。ギアそのものももちろんワクワクするのですが、作られた方のギアに対する想いやブランド立ち上げの背景などをお聞きするのがとても楽しく、大好きな時間です。それに触発され、DIYでのギアカスタムにも挑戦しています。テキーラの天板、ランタンシェードなどなど。失敗も多いですが、その分とても愛着のあるギアを作ることができました。<br>面白い、便利、ワクワクなど本当にいろいろなものが詰まっていると感じた貴社製品をユーザー側としても提供側としても携わりたいです。 </p>
+						</li>
+						<li class="p-motive__item p-motive__item--02">
+							<h3 class="p-motive__heading p-motive__heading--02 js-scale"><span class="u-color__font--accent">2.</span>仕事とプライベートが相互に<br>影響する環境へ</h3>
+							<p class="p-motive__content js-fade"> キャンプに興味を持ったきっかけは、妻が何気なく言った「やってみたいな〜」という一言でしたが、初めて買ったテキーラテーブルにデザインと拡張性の高さからキャンプギアに魅力を感じ、どんどん私の方がのめり込む結果に。<br>また、それと同時にのめり込んでいったのがweb制作でした。初めはキャンプの軍資金になればと始めたものでしたが、自分のスキルがお客様への満足に直結するこの分野に魅力を感じています。また、新しい技術やトレンドが次々と生まれてくる分野なので、「学びに終わりがない」ということも魅力の1つです。<br><strong>この2つがリンクする仕事が私の理想であり、2つのやりがいとの出会いのきっかけを作ってくださった貴社で、その理想を叶えたいです。</strong>
+							</p>
+						</li>
+					</ol>
+				</div>
+				<div class="p-motive__background">
+					<canvas class="p-motive__canvas" id="particles"></canvas>
 				</div>
 			</section>
 			<section class="p-favorite" id="favorite">
@@ -289,24 +311,6 @@
 					</ol>
 				</div>
 			</section>
-			<section class="p-motive" id="motive">
-				<div class="l-inner">
-					<h2 class="c-heading js-fade" lang="en">Mo<span class="c-heading--blue">t</span>ive <span class="c-heading__jp" lang="ja">志望動機</span></h2>
-					<ol class="p-motive__container">
-						<li class="p-motive__item p-motive__item--01">
-							<h3 class="p-motive__heading p-motive__heading--01 js-scale"><span class="u-color__font--accent">1.</span>モノづくりに携わりたい</h3>
-							<p class="p-motive__content js-fade">
-								<strong>webデザインの知識を活かして、キャンプギアの良さをより多くの方に伝えたいと考えています。</strong><br>キャンプを趣味にしてからガレージブランドなど個人でギアを製作されている方にお会いする機会が増えました。そういった方とお話し、ギアに対する想いや細かい配慮等をお聞きし、キャンプでの使用シーンを想像するだけでワクワクしています。また、それに触発され簡単なものをDIYで作るようになりました。失敗も多いですが、出来たときの感動はひとしおでした。<br>ギアの便利さを体感しつつ、一方でモノづくりの難しさを体感しているからこそ、自身が持つwebデザインの知識を活かして、ユーザーが商品の紹介ページを見た時にユーザーのイメージが広がるような、また作り手の想いが伝えられるよう商品PRに貢献したいと考えています。<br>ゆくゆくは自分が企画した商品のページを自分でデザイン、構築してPRまでを一貫して行いたいです。
-							</p>
-						</li>
-						<li class="p-motive__item p-motive__item--02">
-							<h3 class="p-motive__heading p-motive__heading--02 js-scale"><span class="u-color__font--accent">2.</span>仕事とプライベートが相互に<br>影響する環境へ</h3>
-							<p class="p-motive__content js-fade"> 仕事とプライベートがリンクする環境で働きたいと考えています。<br>キャンプを始めたきっかけは、妻が何気なく言った「やってみたいな〜」という一言でした。それがいつしか私の方がどんどん魅力にはまっていきました。<br>そのきっかけはまずはベランダで軽くご飯が食べられるようにと買ったテキーラテーブルでした。そのデザインと拡張性の高さからキャンプギアに魅力を感じ、どんどん沼にはまっていきました。<br>また、それと同時にはまったのがweb制作でした。初めはキャンプの軍資金になればと始めたものでしたが、技術を身に付ければ身に付けるほどお客様に喜んでもらえる引き出しが増え、その技術もどんどん新しい技術やトレンドが生まれ、学びに終わりがないこの分野にも同じくらい魅力を感じ、はまっていきました。<br><strong>この2つがリンクする仕事が私の理想であり、2つのやりがいとの出会いのきっかけを作ってくださった貴社で、その理想を叶えたいです。</strong>
-							</p>
-						</li>
-					</ol>
-				</div>
-			</section>
 			<section class="p-achievement" id="achievement">
 				<div class="l-inner">
 					<h2 class="c-heading js-fade" lang="en">Ach<span class="c-heading--blue">i</span>evement <span class="c-heading__jp" lang="ja">制作実績</span></h2>
@@ -315,6 +319,32 @@
 						<div class="p-achievement__container">
 							<div class="swiper p-achievement__slider">
 								<ul class="swiper-wrapper p-achievement__slider-wrapper js-fade">
+									<li class="swiper-slide p-achievement__slider-item">
+										<div class="p-achievement__data">
+											<h3 class="p-achievement__heading" lang="en"> data </h3>
+											<dl class="p-achievement__list">
+												<div class="p-achievement__item">
+													<dt class="p-achievement__term" lang="en">client</dt>
+													<dd class="p-achievement__discription">有限会社オールオート 様</dd>
+												</div>
+												<div class="p-achievement__item">
+													<dt class="p-achievement__term" lang="en">role</dt>
+													<dd class="p-achievement__discription" lang="en">design / coding</dd>
+												</div>
+												<div class="p-achievement__item">
+													<dt class="p-achievement__term" lang="en">summary</dt>
+													<dd class="p-achievement__discription p-achievement__discription--alignleft"> オリエントコーポレーションで勤務していた時に担当させていただいたお客様です。担当を引き継いでから約5年が経ちましたが、ずっとお世話になっている方でとても思い入れのあるお仕事をさせていただきました。<br> コーポレートカラーの黒をメインとしつつ、カッコよく親しみのあるお店なのでそれが伝わるようデザインし、一番のメインコンテンツである在庫車への導線を考え、構築いたしました。 </dd>
+												</div>
+											</dl>
+											<div class="p-achievement__link">
+												<p class="p-achievement__btn" lang="en"><a href="https://drive.google.com/drive/folders/140_97VgyGRTg0w90yUVgkxBazXwSNP0n?usp=sharing" target="_blank" rel="noopener" class="p-achievement__icon"><span>capture</span><span class="iconify" data-icon="clarity:picture-line"></span></a></p>
+												<p class="p-achievement__btn" lang="en"><a href="https://allauto.fun/" target="_blank" rel="noopener" class="p-achievement__icon"><span>link</span><span class="iconify" data-icon="radix-icons:external-link"></span></a></p>
+											</div>
+										</div>
+										<figure class="p-achievement__figure">
+											<a href="https://allauto.fun/" target="_blank" rel="noopener" class="p-chievement__img-link"><img src="./assets/img/webp/allauto-fv.webp" alt="有限会社オールオート様のTOPページ画像" loading="lazy" class="p-achievement__img"></a>
+										</figure>
+									</li>
 									<li class="swiper-slide p-achievement__slider-item">
 										<div class="p-achievement__data">
 											<h3 class="p-achievement__heading" lang="en"> data </h3>
@@ -399,32 +429,6 @@
 											<dl class="p-achievement__list">
 												<div class="p-achievement__item">
 													<dt class="p-achievement__term" lang="en">client</dt>
-													<dd class="p-achievement__discription"><span>株式会社湖南リサイクルセンター</span><span>(株式会社ユニレージ) 様</span></dd>
-												</div>
-												<div class="p-achievement__item">
-													<dt class="p-achievement__term" lang="en">role</dt>
-													<dd class="p-achievement__discription" lang="en">coding</dd>
-												</div>
-												<div class="p-achievement__item">
-													<dt class="p-achievement__term" lang="en">summary</dt>
-													<dd class="p-achievement__discription p-achievement__discription--alignleft">web制作会社様を通して静的部分のコーディングを担当いたしました。<br>急ぎの案件との事で依頼いただき、依頼から4日で構築いたしました。また、スマホのデザインが間に合わずコーディングしながらスマホで見た際にも表示が崩れないよう調整し、構築しました。</dd>
-												</div>
-											</dl>
-											<div class="p-achievement__link">
-												<p class="p-achievement__btn" lang="en"><a href="https://drive.google.com/drive/folders/1vwmkMZ3VN2RUN-x6dp0P-z-MgoVNps7f?usp=sharing" target="_blank" rel="noopener" class="p-achievement__icon"><span>capture</span><span class="iconify" data-icon="clarity:picture-line"></span></a></p>
-												<p class="p-achievement__btn" lang="en"><a href="https://konan-rc.co.jp/" target="_blank" rel="noopener" class="p-achievement__icon"><span>link</span><span class="iconify" data-icon="radix-icons:external-link"></span></a></p>
-											</div>
-										</div>
-										<figure class="p-achievement__figure">
-											<a href="https://konan-rc.co.jp/" target="_blank" rel="noopener" class="p-achievement__img-link"><img src="./assets/img/webp/konan-fv.webp" alt="湖南リサイクルセンタートップ画像" loading="lazy" class="p-achievement__img"></a>
-										</figure>
-									</li>
-									<li class="swiper-slide p-achievement__slider-item">
-										<div class="p-achievement__data">
-											<h3 class="p-achievement__heading" lang="en"> data </h3>
-											<dl class="p-achievement__list">
-												<div class="p-achievement__item">
-													<dt class="p-achievement__term" lang="en">client</dt>
 													<dd class="p-achievement__discription">株式会社ドクターイスト 様</dd>
 												</div>
 												<div class="p-achievement__item">
@@ -462,10 +466,10 @@
 							<span class="u-color__font--accent">ワクワク</span>を届ける<br>PRサイトのデザイン・構築
 						</h3>
 						<p class="p-future__content"> システムのUIデザイン、商品のPRページなどデザインから構築まで何でもまずは経験したいです。<br>応募したフロントエンドエンジニアは貴社で働く人、環境、ひとつの商品が出来上がって、PRしてユーザーの反応がどうだったかなど全てに携われるポジションだと考えています。<br>ゆくゆくはBlenderやThress.jsなど使ってより具体的に、商品をサイトやテント内のスペースに配置した時の空間が想像できるようなページを構築し、よりワクワク感をユーザーに届けられるよう取り組みたいと考えています。 </p>
-						<figure class="p-future__figure">
-							<img src="./assets/img/webp/future-img.webp" alt="" loading="lazy" class="p-future__img p-future__img--01">
-							<img src="./assets/img/webp/future-img-02.webp" alt="" loading="lazy" class="p-future__img p-future__img--02">
-						</figure>
+						<div class="p-future__model">
+							<canvas id="canvas" class="p-future__canvas"></canvas>
+							<p class="p-future__caption"><small>※ドラッグで回転、ピンチでズームイン・アウトができますので、ぜひ遊んでみてください。</small></p>
+						</div>
 					</div>
 				</div>
 			</section>
